@@ -53,7 +53,7 @@ body .overall_container {
     grid-auto-rows: 70vh;
     gap: 2em;
     grid-template-areas:
-        "socialsS midsectionS buttonsS";
+        "socialsS midsectionS webringsS";
     justify-items: center;
     overflow: auto
 }
@@ -81,7 +81,7 @@ body .overall_container {
     float: right;
 }
 
-.buttons {
+.webrings {
     /* border: solid rgb(230, 9, 219) 2px; */
     overflow-y: auto;
     overflow-wrap: anywhere;
@@ -250,7 +250,7 @@ a {
 
 }
 
-.buttons {
+.webrings {
     background-color: var(--linkbox_color);
     color: var(--text1);
     border: solid 5px;
@@ -366,7 +366,7 @@ a {
             grid-template-areas:
                 "midsectionS "
                 "socialsS"
-                "buttonsS";
+                "webringsS";
             justify-items: center;
         }
 
@@ -391,7 +391,7 @@ a {
             min-width: 10vw;
         }
 
-        .buttons {
+        .webrings {
             min-height: 0;
             max-height: fit-content;
             /* overflow-y: auto; */
