@@ -18,6 +18,6 @@ jobs:
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
-        dist_dir: /mustarddayartswebsite
+        dist_dir: mustarddayartswebsite
 
  
