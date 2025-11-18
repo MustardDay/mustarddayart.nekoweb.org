@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	
+    <head>
+<link rel="stylesheet" href="boxesstyle.css"/>
+
+        <title>mustarddayart</title>
+    </head>
+    <body>
+
+  <div class="bentocontainer">
+    <div class="pink" style="grid-area: pinkstyle">
+      <h1 style="text-justify: center; text-align: center;"> A QUICK AND DIRTY BENTO/GRID TUTORIAL</h1>
+    </div>
+    <div class="yellow" style="grid-area: yellowstyle">
+      <h2>Set-up</h2>
+      <p>Set-up is probably the most important part. Start by making a div with class="bentocontainer". Or whatever will help you remember that it's the full scope of the "bento box". </p>
+      <p>(i forgot to tell you to draw your ideal grid first lol)</p> <p>Anyway make all the inner containers you need, and give them unique classes you'll remember. Then set style to grid-area:[class]Style or [class]-style or whatever works for you!</p>
+      <p>Inspect the HTML to see all my divs</p>
+    </div>
+    <div class="blue" style="grid-area: bluestyle">
+      <h2>Bento Creation</h2> 
+      <p>Copy this:</p>
+      <p>.bentocontainer{ </p>
+        <p>display: grid; </p>
+      <p>grid-template-columns: repeat(3, 1fr);</p>
+      <p>grid-auto-rows: auto;</p>
+      <p>grid-template-areas: </p>
+      <p>"pinkstyle pinkstyle pinkstyle"</p>
+      <p>"yellowstyle bluestyle greenstyle" </p>
+      <p>"tanstyle tanstyle orangestyle" 
+      }</p>
+      <p>you can replace with your own styles now</p>
+      <p>Ok now I'll tell you what each part means:
+      </p>
+      <ul>
+        <li> First line lets you style your full bento box</li>
+        <li> "Display:grid;" prepares bento organization</li>
+        <li> Auto columns uses the values you give it (1fr to make it responsive) and makes the columns that wide. The number of values is the number of invisible columns, so I used repeat() to make 3 columns, and used fr to make it use proportions instead of pixels.</li>
+    </ul>
+    </div>
+    <div class="green" style="grid-area: greenstyle">
+      <h2>Code Explained</h2>
+      <ul>
+        <li> Auto rows lets the computer do its thing and change the height of the rows as needed. I used auto so it adjusts to how much content there is. Both grid template and grid auto are what makes your bento box responsive to different screen sizes.</li>
+<li> Template areas is the proportions. Visualize or look at your bento box plan. Cut it into columns and rows. Take that grid, and type how many grid-boxes each compartment will take up, from left to right, top to bottom. Essentially, write the grid proportions as text with quotation marks around each line.
+</li>
+        <li>Grid-area tags the boxes for composition.</li>      </ul>
+        <p> After this you will probably have to add padding or margins to your text. You can also add a gap or border.</p>
+        <h3>If you want a gap it needs to go in your bento container!!!</h3>
+       </div>
+    <div class="tan" style="grid-area: tanstyle">
+      <p>THAT'S IT YAYYYY OK HERE ARE MY SOURCES TEEHEE: <a href="https://youtu.be/JYfiaSKeYhE?si=XFEuBXQbVo5vBvap">"CSS Grid Course-The Only Grid Tutorial You'll Ever Need by Coding2GO"</a>, my beautiful mind, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min">developer.mozilla.org</a>.</p>
+      <p> P.S. the unique classes are so you can style them individually as well. I used background-color and border.</p>
+    </div>
+    <div class="orange" style="grid-area: orangestyle"> 
+      <p>A certified Medjed post -⁠ᄒ⁠ᴥ⁠ᄒ⁠- </p>
+      <a href="index.html"><button>home</button></a>
+      <iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="28"></iframe>
+      <a href="bboxpt2.html"><button>pt 2</button></a>
+    </div>
+  </div>
+
+    </body>
+</html>

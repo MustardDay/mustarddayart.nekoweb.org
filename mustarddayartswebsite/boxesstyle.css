@@ -1,0 +1,56 @@
+body{
+  margin: 0;
+  background-color: coral;
+  
+}
+.follow{
+  color: brown;
+  background-color: lightcoral;
+}
+.following{
+  color: black;
+  background-color: red;
+}
+p, h2, h1, h3{
+  color: brown;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+ul{
+  color: brown;
+  padding-left: 20px;
+  border-right: 10px;
+}
+.bentocontainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+gap: 3px;
+  grid-template-areas: 
+  "pinkstyle pinkstyle pinkstyle"
+  "yellowstyle bluestyle greenstyle"
+  "tanstyle tanstyle orangestyle"
+}
+.bentocontainer div{
+  border: 2px solid brown;
+}
+.blue {
+  background-color: lightBlue;
+}
+.pink{
+  background-color: pink;
+}
+.yellow{
+  background-color: lightYellow;
+}
+ .green{
+  background-color: lightGreen;
+}
+ .tan{
+  background-color: wheat;
+}
+
+.orange{
+  background-color: lightsalmon;
+}

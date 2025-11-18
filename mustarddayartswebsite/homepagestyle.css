@@ -1,0 +1,492 @@
+:root {
+    --border_color: #0729c2;
+    --changelog_color: #FF5154;
+    --linkbox_color: #FAFF7F;
+    --textbox_color: #f7feff;
+    --nav_color: #FF88DC;
+    --background_color: #bbe8ff;
+    --text1: #0729c2;
+    --text2: #36010e;
+    --text3: #f7feff;
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --border_color: #000000;
+        --changelog_color: #717e54;
+        --linkbox_color: #496149;
+        --textbox_color: #558186;
+        --nav_color: #5b3146;
+        --background_color: #2d2a46;
+        --text1: #ffe694;
+        --text2: #f22929;
+        --text3: #ffe694;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: var(--background_color);
+}
+
+body .overall_container {
+    margin: 0;
+    min-height: 90vh;
+    max-height: fit-content;
+    min-width: 70vw;
+    max-width: 70vw;
+    /* border: solid red 2px; */
+    justify-self: center;
+    align-self: center;
+}
+
+.inner_container {
+    margin-block: 1em;
+
+    min-height: 0%;
+    max-height: 700px;
+    min-width: 0%;
+    max-width: 100%;
+    /* border: solid orange 2px; */
+    display: grid;
+    grid-auto-columns: 90px fit-content 90px;
+    grid-auto-rows: 70vh;
+    gap: 2em;
+    grid-template-areas:
+        "socialsS midsectionS webringsS";
+    justify-items: center;
+    overflow: auto
+}
+
+.socials {
+    /* border: solid black 2px; */
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    justify-content: center;
+    text-justify: center;
+    max-width: 90px;
+    min-width: 10vw;
+
+}
+
+.midsection {
+    overflow-y: auto;
+    /*  border: solid rgb(16, 234, 215) 2px; */
+    overflow-wrap: anywhere;
+    max-width: auto;
+    min-width: 100%;
+}
+
+.midsection img {
+    float: right;
+}
+
+.webrings {
+    /* border: solid rgb(230, 9, 219) 2px; */
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    justify-content: center;
+    text-justify: center;
+    max-width: 90px;
+    min-width: 10vw;
+
+}
+
+.outer_container {
+    min-height: 0%;
+
+    min-width: 0%;
+    max-width: 100%;
+    /* border: solid 2px greenyellow;*/
+
+    display: grid;
+    grid-auto-columns: 30vw 1fr;
+    grid-auto-rows: 45em;
+    gap: 1em;
+    grid-template-areas:
+        "changelogS guestbookS";
+    justify-content: center;
+
+}
+
+.changelog {
+    min-height: 0%;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
+
+}
+
+.guestbook iframe {
+    overflow-y: auto;
+    overflow-wrap: normal;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: var(--linkbox_color);
+    overflow-wrap: anywhere;
+}
+
+.giant_grid {
+    margin: 0;
+    min-height: 90vh;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-auto-columns: auto min-content auto;
+    grid-auto-rows: min-content 50px fit-content fit-content fit-content;
+    grid-template-areas:
+        "top_navS top_navS top_navS"
+        "decoleftS announcementsS decorightS"
+        "decoleftS overallcontainerS decorightS"
+        "decoleftS middle_marqueeS decorightS"
+        "decoleftS outercontainerS decorightS";
+}
+
+.top_nav {
+    position: sticky;
+    top: 0;
+    overflow-wrap: anywhere;
+    overflow: hidden;
+    justify-content: center;
+
+}
+
+.announcements {
+
+    height: 60px;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 100%;
+    height: 60px;
+    border: solid 3px #be1e1e;
+    display: flex;
+    overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 5s infinite linear;
+    padding-right: 1em
+}
+
+.card {
+    min-width: max-content;
+
+    flex: 0 0 5em;
+    height: 100%;
+    background-color: #f0ebbb;
+    padding: 0;
+    font-family: 30px;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+
+    to {
+        translate: -100%;
+    }
+}
+
+.deco_left {
+    /* border: solid 2px rgb(3, 129, 18); */
+    background-color: 0 0 0 0;
+
+    z-index: 3;
+}
+
+.deco_right {
+    /* Border: solid 2px rgb(52, 42, 195);*/
+    z-index: 3;
+    background-color: 0 0 0 0;
+}
+
+/*------------------------------- */
+
+a {
+    text-decoration: none;
+
+}
+
+.top_nav {
+    padding: 18px;
+    background-color: var(--nav_color);
+    color: var(--text1);
+    border-bottom: solid 5px;
+    border-right: solid 5px;
+    border-left: solid 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-color: var(--border_color);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    z-index: 4;
+}
+
+
+.top_nav a:link {
+    color: var(--text1);
+}
+
+.top_nav a:hover {
+    color: var(--text2);
+}
+
+.top_nav a:active {
+
+    color: var(--text2);
+
+}
+
+.announcements {
+    background-color: var(--background_color);
+    color: var(--text1);
+    border: solid 5px;
+
+    border-radius: 0px 0px 17px 17px;
+    border-color: var(--border_color);
+    z-index: 3;
+
+}
+
+.socials {
+    background-color: var(--linkbox_color);
+    color: var(--text1);
+    border: solid 5px;
+    border-radius: 17px;
+    border-color: var(--border_color);
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+
+}
+
+.midsection {
+    background-color: var(--textbox_color);
+    color: var(--text1);
+    border: solid 5px;
+    border-radius: 17px;
+    border-color: var(--border_color);
+    padding: 10px;
+    z-index: 3;
+
+}
+
+.webrings {
+    background-color: var(--linkbox_color);
+    color: var(--text1);
+    border: solid 5px;
+    border-radius: 17px;
+    border-color: var(--border_color);
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    z-index: 1;
+
+}
+
+.middle_marquee {
+    min-height: 0;
+    max-height: fit-content;
+    /* overflow-y: auto; */
+    overflow-wrap: anywhere;
+    justify-content: center;
+    text-justify: center;
+    max-width: 100%;
+    min-width: 10vw;
+}
+
+.middle_marquee {
+    margin: auto;
+    align-self: center;
+    padding: 18px;
+    background-color: var(--background_color);
+    color: var(--text1);
+    border: solid 5px;
+    border-radius: 17px;
+    border-color: var(--border_color);
+    text-align: center;
+    margin-bottom: 1em;
+    z-index: 3;
+}
+
+.changelog {
+    background-color: var(--changelog_color);
+    color: var(--text3);
+    border: solid 5px;
+    border-radius: 17px;
+    border-color: var(--border_color);
+    padding: 10px;
+    z-index: 1;
+}
+
+.guestbook {
+    border: solid 5px;
+    border-radius: 17px;
+    border-color: var(--border_color);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* scrollbars */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 17px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fde2e200;
+    box-shadow: inset 0 0 8px var(--border_color);
+    border-radius: 17px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bbe8ff;
+    box-shadow: inset 0 0 5px #2a50f7;
+    border-radius: 17px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .giant_grid {
+        margin: 0;
+        min-height: 90dvh;
+        max-height: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-auto-columns: auto 100% min-content auto auto fit-content;
+        grid-auto-rows: repeat(4, min-content) 250px 2000px;
+        grid-template-areas:
+            "top_navS top_navS top_navS"
+            "decoleftS announcementsS decorightS"
+            "decoleftS overallcontainerS  decorightS"
+            "decoleftS middle_marqueeS decorightS"
+            "decoleftS  changelogS decorightS"
+            "guestbookS guestbookS guestbookS";
+
+
+        .inner_container {
+            margin-block: 1em;
+            min-height: 0%;
+            max-height: fit-content;
+            min-width: 0;
+            max-width: 100%;
+            display: grid;
+            grid-auto-columns: auto;
+            grid-auto-rows: max-content;
+            gap: 2em;
+            grid-template-areas:
+                "midsectionS "
+                "socialsS"
+                "webringsS";
+            justify-items: center;
+        }
+
+        .socials {
+            min-height: 0;
+            max-height: fit-content;
+            overflow-wrap: anywhere;
+            justify-content: center;
+            text-justify: center;
+            max-width: 100%;
+            min-width: 10vw;
+        }
+
+        .midsection {
+            min-height: 0;
+            max-height: fit-content;
+            /* overflow-y: auto; */
+            overflow-wrap: anywhere;
+            justify-content: center;
+            text-justify: center;
+            max-width: 100%;
+            min-width: 10vw;
+        }
+
+        .webrings {
+            min-height: 0;
+            max-height: fit-content;
+            /* overflow-y: auto; */
+            overflow-wrap: anywhere;
+            justify-content: center;
+            text-justify: center;
+            max-width: 100%;
+            min-width: 10vw;
+        }
+
+        .outer_container {
+            min-height: 0%;
+            min-width: 0%;
+            max-width: 100%;
+            /* border: solid 2px greenyellow;*/
+
+            display: grid;
+            grid-auto-columns: 100% 100%;
+            grid-auto-rows: max-content 45em;
+            gap: 1em;
+            grid-template-areas:
+                "changelogS"
+                "guestbookS";
+            justify-content: center;
+
+        }
+
+        .changelog {
+            min-height: 0;
+            max-height: 250px;
+            overflow-wrap: anywhere;
+            justify-content: center;
+            text-justify: center;
+            max-width: 100%;
+            min-width: 10vw;
+        }
+
+        .guestbook {
+            min-height: 0;
+            /* overflow-y: auto; */
+            overflow-wrap: anywhere;
+            justify-content: center;
+            text-justify: center;
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+    }
+<<<<<<< HEAD:homepagestyle.css
+
+}
+=======
+}
+>>>>>>> 3aa7b71b8b72804e083ea90947db0500dc4919a6:mustarddayartswebsite/homepagestyle.css
