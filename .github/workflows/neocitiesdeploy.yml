@@ -5,7 +5,9 @@ on:
   push:
     branches:
       - main
-
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
 jobs:
   deploy:
     runs-on: windows-latest
@@ -16,8 +18,10 @@ jobs:
            - name: Deploy to Neocities
   uses: bcomnes/deploy-to-neocities@v3.0.4
       with:
-        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+        api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
+        neocities_supporter: false 
+        preview_before_deploy: true
         dist_dir: mustarddayartswebsite
 
  
