@@ -420,10 +420,9 @@ a {
         grid-template-areas:
             "top_navS top_navS top_navS"
             "decoleftS announcementsS decorightS"
-            "decoleftS overallcontainerS  decorightS"
+            "decoleftS innercontainerS  decorightS"
             "decoleftS middle_marqueeS decorightS"
-            "decoleftS  changelogS decorightS"
-            "guestbookS guestbookS guestbookS";
+            "decoleftS  outercontainerS decorightS";
 
 
         .inner_container {
