@@ -183,7 +183,6 @@ body {
 
 .card {
     min-width: max-content;
-
     flex: 0 0 5em;
     height: 100%;
     background-color: #f0ebbb;
@@ -310,17 +309,13 @@ a {
     min-height: 0;
     max-height: fit-content;
     /* overflow-y: auto; */
-    overflow-wrap: anywhere;
     justify-content: center;
     text-justify: center;
-    max-width: 100%;
-    min-width: 10vw;
 }
 
 .middle_marquee {
-    margin: auto;
+    margin: 0;
     align-self: center;
-    padding: 18px;
     background-color: var(--background_color);
     color: var(--text1);
     border: solid 5px;
