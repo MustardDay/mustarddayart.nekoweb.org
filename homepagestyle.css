@@ -29,17 +29,17 @@ body {
     background-color: var(--background_color);
 }
 
-body .overall_container {
+/*body .overall_container {
     border: #f0ebbb 5px solid;
     margin: 0;
     min-height: 90vh;
     max-height: fit-content;
     min-width: 70vw;
     max-width: 70vw;
-    /* border: solid red 2px; */
+    /* border: solid red 2px; 
     justify-self: center;
     align-self: center;
-}
+}*/
 
 .inner_container {
     margin-block: 1em;
@@ -48,7 +48,7 @@ body .overall_container {
     max-height: 700px;
     min-width: 0%;
     max-width: 100%;
-     border: solid orange 2px; 
+    /*  border: solid orange 2px; */
     display: grid;
     grid-auto-columns: 90px fit-content 90px;
     grid-auto-rows: 70vh;
@@ -130,13 +130,13 @@ body .overall_container {
 
 .giant_grid {
     margin: 0;
-    min-height: 90vh;
-    max-height: 100%;
+    min-height: fit-content;
+    max-height: fit-content;
     min-width: 100%;
     max-width: 100%;
     display: grid;
-    grid-auto-columns: auto min-content auto;
-    grid-auto-rows: min-content 50px fit-content fit-content fit-content;
+    grid-auto-columns: auto 70dvw auto;
+    grid-auto-rows: 60px 60px fit-content fit-content fit-content;
     grid-template-areas:
         "top_navS top_navS top_navS"
         "decoleftS announcementsS decorightS"
@@ -240,7 +240,7 @@ a {
     border-left: 0;
     border-right: 0;
     text-align: center;
-    z-index: 4;
+    z-index: 10;
 }
 
 
